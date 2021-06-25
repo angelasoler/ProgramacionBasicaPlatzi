@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tu peso en Marte o Jupiter</title>
+        <style type="text/css">
+        body
+        {
+            
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 600px;
+            margin: auto;
+            background-color: whitesmoke;
+            padding: 0px 20px 20px 20px;
+            border: 5px solid black;
+        }
+        h1
+        {
+            font-family: fantasy;
+        }
+        h5
+        {
+            font-style:italic;
+            font-weight: lighter;
+        }
+        strong
+        {
+            background-color: rgb(236, 236, 122);
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Tu peso en otro planeta</h1>
+        <p>En la tierra pesas distinto que en Marte o Jupiter</p>
+        <script type="text/javascript">
+            var usuario = prompt("Cual es tu peso?");
+            var planeta = parseInt(prompt("Elige tu planeta\nteclea el 1 para Marte, o el 2 para Jupiter"));
+            var peso = parseFloat(usuario);
+            var g_tierra = 9.8;
+            var g_marte = 3.7;
+            var g_jupiter = 24.8;
+            var peso_final;
+            var mundo;
+            if (planeta == 1)
+            {
+                peso_final = peso * g_marte / g_tierra;
+                mundo = "marte";
+            }
+            else if(planeta == 2)
+            {
+                peso_final = peso * g_jupiter / g_tierra;
+                mundo = "jupiter";
+            }
+            else
+            {
+                alert(planeta + " es invalido, presiona F5 para volverlo a intentar! ;)");
+            }
+            peso_final = (peso_final.toFixed(1));
+            document.write("Tu peso en " + mundo, " es <strong>" + peso_final + " kilos</strong>");
+        </script>
+        <h5>***Presiona <strong>F5</strong> si quieres ejecutar nuevamente el programa! ;) ***</h5>
+    </body>
+</html>
